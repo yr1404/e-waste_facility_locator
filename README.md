@@ -1,6 +1,15 @@
 # E-Waste Facility Locator:package:
 This repository contains our project files. 
 
+## TODO List:  
+- [ ] Frontend
+  - [ ] **Wireframing*
+  - [ ] Building prototype as per wireframe
+  - [ ] Connecting to backend
+- [ ] Backend
+
+(*  indicates the task on which we are currently working)
+
 ## Start Working on this project
 To start collaborating, you need to follow these steps:
 - Install git on your device from this link https://git-scm.com/  
