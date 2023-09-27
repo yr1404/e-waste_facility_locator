@@ -6,7 +6,17 @@ This repository contains our project files.
   - [ ] **Wireframing*
   - [ ] Building prototype as per wireframe
   - [ ] Connecting to backend
+
 - [ ] Backend
+  - [ ] Database
+    - [ ] SQL
+    - [ ] NoSQL 
+  - [ ] API
+  - [ ] Authentication
+  - [ ] VM Setup
+  - [ ] LoadBalancing
+
+- [ ] Deployment 
 
 (*  indicates the task on which we are currently working)
 
