@@ -16,7 +16,8 @@ This repository contains our project files.
   - [ ] VM Setup
   - [ ] LoadBalancing
 
-- [ ] Deployment 
+- [ ] Deployment
+  - [ ] Firebase
 
 (*  indicates the task on which we are currently working)
 
