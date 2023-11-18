@@ -1,0 +1,24 @@
+div {
+    overflow: hidden;
+}
+
+div.container {
+    width: 100%;
+    height: fit-content;
+    overflow-y: hidden;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    #recycle-img {
+        position: fixed;
+        z-index: 5;
+        transform: translateY(300px);
+        transition: transform 0.3s ease-out;
+        
+        &:hover {
+            transform: translateY(250px);
+
+        }
+    }
+}
