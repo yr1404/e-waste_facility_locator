@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Expletus+Sans&family=Hanken+Grotesk:wght@700&family=PT+Sans:wght@700&display=swap');
+
 div {
     overflow: hidden;
 }
@@ -10,6 +12,10 @@ div.container {
     align-items: flex-start;
     justify-content: center;
 
+    #bg-image {
+        transition: opacity 0.3s ease-out;
+    }
+
     #recycle-img {
         position: fixed;
         z-index: 5;
@@ -18,7 +24,24 @@ div.container {
         
         &:hover {
             transform: translateY(250px);
+            
+        }
+    }
+    
+    
+    p {
+        position: fixed;
+        z-index: 0;
+        transform: translateY(65vh);
+        // opacity: 0;
+        text-transform: uppercase;
+        font-family: 'PT Sans', sans-serif;
+        font-weight: bold;
+        font-size: 210%;
+        transition: opacity 0.3s ease;
 
+        span {
+            color: #538C0B;
         }
     }
 }
