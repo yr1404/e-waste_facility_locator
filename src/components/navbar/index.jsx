@@ -1,26 +1,49 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './styles.scss';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
 
-    const [isClicked, setIsClicked] = useState(false);
+    const [searchIsClicked, setSearchIsClicked] = useState(false);
 
     const handleClick = () => {
-        setIsClicked(!isClicked);
-        console.log("clicked");
+        setSearchIsClicked(!searchIsClicked);
     };
 
+    const [isSmallScreen, setIsSmallScreen] = useState(false);
+    useEffect(() => {
+        const checkScreenSize = () => {
+            setIsSmallScreen(window.innerWidth < 750);
+        };
+
+        // Initial check on component mount
+        checkScreenSize();
+
+        // Event listener for screen size changes
+        window.addEventListener('resize', checkScreenSize);
+
+        // Cleanup the event listener on component unmount
+        return () => {
+            window.removeEventListener('resize', checkScreenSize);
+        };
+    }, []);
+
+    const [menuIsClicked, setMenuIsClicked] = useState(false);
+    const menuClick = () => {
+        setMenuIsClicked(!menuIsClicked);
+    }
 
     return (
         <nav id="navbar">
             <div id="logo">
                 <Link to="" id='logo-link'>
                     <img src="assets/logo 1.png" alt="Logo" />
-                    <span>eWaste Facility Locator</span>
+                    <span style={{visibility: isSmallScreen ? 'hidden' : 'visible'}}>eWaste Facility Locator</span>
                 </Link>
             </div>
-            <ul className="nav-links-container">
+
+
+            <ul className="nav-links-container" style={{ zIndex: searchIsClicked ? 0 : 2, visibility: isSmallScreen ? (menuIsClicked ? 'visible' : 'hidden') : 'visible'}}>
                 <li className="navlinks">
                     <Link to="/locate">
                         <img src="assets/locate.png" alt="" id='locate' />
@@ -28,20 +51,22 @@ const Navbar = () => {
                 </li>
                 <li className="navlinks">
                     <Link to="/credit">
-                        <img src="assets/coins.png" alt="Credit Points" id='credit-points'/>
+                        <img src="assets/coins.png" alt="Credit Points" id='credit' />
                     </Link>
                 </li>
                 <li className="navlinks">
                     <Link to="/login" id='login-button'>Log In</Link>
                 </li>
                 <li className="navLinks">
-                    <img src="assets/search.png" alt=""
-                        onClick={handleClick} 
-                        style={{cursor:'pointer', zIndex:'15', position:'fixed', marginLeft:isClicked? '400px' : '410px', transition: 'all 0.3s ease'}}
+                    <img src="assets/search.png" alt="Search"
+                        onClick={handleClick}
+                        id='search-img'
+                        style={{ right: isSmallScreen ? '0' : (searchIsClicked ? '0.5em' : '0' ) }}
                     />
-                    <input type='text' id="search-bar" placeholder="Search" style={{opacity: isClicked ? 1 : 0, zIndex: isClicked ? 1 : 0}} />
                 </li>
+                <input type='text' id="search-bar" placeholder="Search" style={{ opacity: searchIsClicked ? 1 : 0, zIndex: searchIsClicked ? 3 : 0 }} />
             </ul>
+            <img src="assets/hamburger.png" alt="Menu" id='menu' style={{display: isSmallScreen ? 'inline' : 'none'}} onClick={menuClick}/>
         </nav>
     )
 }

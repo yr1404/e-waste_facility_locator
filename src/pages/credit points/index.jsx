@@ -2,7 +2,7 @@ import React from 'react'
 
 const CreditPoints = () => {
   return (
-    <div>CreditPoints</div>
+    <div style={{height: '3000px'}}>CreditPoints</div>
   )
 }
 

@@ -16,8 +16,6 @@ const Home = () => {
 
 
     return (
-        <div>
-
             <div className="container">
                 <img src="assets/background-electronic-devices 1.png" alt="bgImage" id='bg-image' 
                     style={{opacity: isHovered ? 0 : 1}}
@@ -31,7 +29,6 @@ const Home = () => {
                 />
                 <p className="recycle-text" style={{opacity: isHovered ? 1 : 0}}><span>Recycle Today</span>, For a Better Tomorrow</p>
             </div>
-        </div>
     )
 }
 
