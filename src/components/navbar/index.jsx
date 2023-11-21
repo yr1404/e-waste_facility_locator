@@ -46,16 +46,16 @@ const Navbar = () => {
             <ul className="nav-links-container" style={{ zIndex: searchIsClicked ? 0 : 2, visibility: isSmallScreen ? (menuIsClicked ? 'visible' : 'hidden') : 'visible'}}>
                 <li className="navlinks">
                     <Link to="/locate">
-                        <img src="assets/locate.png" alt="" id='locate' />
+                        <img src="assets/locate.png" alt="" id='locate' onClick={menuClick} />
                     </Link>
                 </li>
                 <li className="navlinks">
                     <Link to="/credit">
-                        <img src="assets/coins.png" alt="Credit Points" id='credit' />
+                        <img src="assets/coins.png" alt="Credit Points" id='credit' onClick={menuClick} />
                     </Link>
                 </li>
                 <li className="navlinks">
-                    <Link to="/login" id='login-button'>Log In</Link>
+                    <Link to="/login" id='login-button' onClick={menuClick}>Log In</Link>
                 </li>
                 <li className="navLinks">
                     <img src="assets/search.png" alt="Search"

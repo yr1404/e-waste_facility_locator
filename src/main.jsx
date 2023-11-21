@@ -5,6 +5,7 @@ import Home from './pages/Home/index.jsx'
 import LocateNearbyCentres from './pages/locate nearby centres/index.jsx'
 import CreditPoints from './pages/credit points/index.jsx'
 import LogIn from './components/login/index.jsx'
+import SignUp from './components/signup/index.jsx'
 import './index.css'
 
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
@@ -17,6 +18,7 @@ const router = createBrowserRouter(
       <Route path='locate' element={<LocateNearbyCentres />} />
       <Route path='credit' element={<CreditPoints />} />
       <Route path='login' element={<LogIn />} />
+      <Route path='sign-up' element={<SignUp />} />
     </Route>
   )
 )
