@@ -4,7 +4,7 @@ This repository contains our project files.
 ## TODO List:  
 - [ ] Frontend
   - [ ] **Wireframing*
-  - [ ] Building prototype as per wireframe
+  - [ ] **Building prototype as per wireframe*
   - [ ] Connecting to backend
 
 - [ ] Backend
@@ -12,7 +12,7 @@ This repository contains our project files.
     - [ ] SQL
     - [ ] NoSQL 
   - [ ] API
-  - [ ] Authentication
+  - [x] Authentication
   - [ ] VM Setup
   - [ ] LoadBalancing
 
