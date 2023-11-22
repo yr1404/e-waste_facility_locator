@@ -8,12 +8,14 @@ const LogIn = () => {
 
   const handleBgClick = (e) => {
     if (e.target.classList.contains('login-container')) {
-      navigate(-1);
+      navigate('/');
     }
   }
 
   return (
-    
+
+    <div className="container">
+      <img src="assets/background-electronic-devices 1.png" alt="bgImage" id='bg-image' />
       <div className="login-container" onClick={handleBgClick}>
         <form action="" className="login-form">
           <h2>Login</h2>
@@ -41,6 +43,7 @@ const LogIn = () => {
 
         </form>
       </div>
+    </div>
 
   )
 }
