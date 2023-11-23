@@ -1,0 +1,57 @@
+.locate-container {
+    background-color: #66B266;
+    height: 100vh;
+    position: relative; // Add position relative to allow absolute positioning of child
+    padding-top: 15vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    #search-location {
+        position: relative; // Position the search-location div absolutely
+        display: flex;
+        justify-content: center;
+
+        input {
+            width: 20em;
+            height: 2.2em;
+            border-radius: 20px;
+            border: none;
+            background-color: #fff;
+            padding-left: 2em;
+            padding-right: 3em;
+        }
+
+        img {
+            cursor: pointer;
+            position: relative;
+            right: 2.5em;
+            z-index: 4;
+        }
+    }
+
+    .map {
+        background-color: white;
+        width: 100%;
+        height: 9em;
+    }
+
+    .table-container {
+        padding-top: 9vh;
+
+        .location-table {
+            background-color: #D9D9D9;
+            border-spacing: 0;
+
+            th,
+            td {
+                border: 1px solid;
+                padding: 1em 3em;
+            }
+
+            tbody tr:nth-child(odd) {
+                background-color: #AEAEAE;
+            }
+        }
+    }
+}
