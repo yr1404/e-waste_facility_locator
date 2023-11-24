@@ -1,0 +1,87 @@
+.credit-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 12vh;
+    background-color: #66B266;
+    height: 3000px;
+
+    .credit-heading {
+        font-size: 30px;
+        font-family: 'PT Sans', sans-serif;
+        font-weight: bold;
+        color: white;
+    }
+
+    .items-container {
+        padding-top: 5vh;
+        display: flex;
+        justify-content: center;
+        height: fit-content;
+        width: 60%;
+
+        .parent-item {
+            border-radius: 50px 0;
+            width: 100%;
+            padding-inline: 9vh;
+            padding-bottom: 5vh;
+            background-color: #D9D9D9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            h2 {
+                font-family: 'PT Sans';
+                font-weight: 400;
+                padding-bottom: 3vh;
+            }
+
+            .child-items-container {
+                display: flex;
+                justify-content: center;
+                flex-direction: row;
+                gap: 3em;
+                flex-wrap: wrap;
+
+                .items {
+                    border-radius: 40px 0;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-items: center;
+                    padding-top: 5vh;
+                    
+                    width: 14em;
+                    height: fit-content;
+                    background-color: #629422;
+                    font-size: 20px;
+                    
+                    .count {
+                        border-radius: 40px 0;
+                        font-family: 'PT Sans';
+                        font-weight: 400;
+                        width: 3em;
+                        display: flex;
+                        justify-content: space-around;
+                        font-size: 38px;
+                        background-color: #2947A9;
+                        color: white;
+                        
+                        button {
+                            font-size: 38px;
+                            cursor: pointer;
+                            background: transparent;
+                            border: none;
+                            color: white;
+                        }
+                    }
+                }
+            }
+
+
+
+
+        }
+    }
+}
