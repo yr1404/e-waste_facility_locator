@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@200&display=swap');
+
+.signup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.648);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .signup-form {
+        width: 35%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 30px;
+
+        button {
+            background-color: #66B266;
+            font-size: 30px;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            height: 2em;
+            width: 70%;
+            cursor: pointer;
+        }
+
+        h2 {
+            font-family: 'PT Sans';
+            font-size: 40px;
+            margin-block: 10px;
+        }
+
+        span {
+            font-family: 'Lexend', sans-serif;
+            font-size: 20px;
+        }
+
+        .login {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            h4 {
+                font-family: 'Lexend', sans-serif;
+                font-weight: 300;
+                text-align: center;
+
+                &:before {
+                    display: block;
+                    content: "";
+                    width: 12vw;
+                    height: 1px;
+                    background-color: black;
+                    position: relative;
+                    left: -60%;
+                    top: 50%;
+                }
+
+                &:after {
+                    display: block;
+                    content: "";
+                    width: 12vw;
+                    height: 1px;
+                    background-color: black;
+                    position: relative;
+                    left: 60%;
+                    top: -47%;
+                }
+
+            }
+
+            #link {
+                text-decoration: none;
+                font-family: 'Lexend', sans-serif;
+                font-weight: 600;
+                color: #000;
+            }
+
+           
+        }
+
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .signup-container {
+
+        .signup-form {
+            width: 50%;
+        }
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+    .signup-container {
+
+        .signup-form {
+            width: 70%;
+        }
+    }
+
+}
+
+@media screen and (max-width: 750px) {
+    .signup-container {
+        .signup-form {
+            width: 90%;
+            
+            .login {
+                h4 {
+                    
+                    &:before {
+                        width: 20vw;
+                        left: -90%;
+                    }
+
+                    &:after {
+                        width: 20vw;
+                        left: 90%;
+                    }
+                    
+                }
+            }
+
+            #policy-text {
+                padding-inline: 0.3em;
+            }
+        }
+    }
+
+}

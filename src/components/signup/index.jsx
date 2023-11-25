@@ -1,4 +1,5 @@
 import React from 'react'
+import './styles.scss'
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
@@ -6,7 +7,7 @@ const SignUp = () => {
   const navigate = useNavigate();
 
   const handleBgClick = (e) => {
-    if (e.target.classList.contains('login-container')) {
+    if (e.target.classList.contains('signup-container')) {
       navigate('/');
     }
   }
@@ -15,8 +16,9 @@ const SignUp = () => {
     <div className="container">
       <img src="assets/background-electronic-devices 1.png" alt="bgImage" id='bg-image' />
 
-      <div className="login-container" onClick={handleBgClick}>
-        <form action="" className="login-form">
+      <div className="signup-container" onClick={handleBgClick}>
+
+        <form action="" className="signup-form">
 
           <h2>SignUp</h2>
 
@@ -125,12 +127,12 @@ const SignUp = () => {
             </div>
           </div>
 
-          <span>By creating an account you agree to our <a href="">Terms & Policy</a></span>
+          <span id='policy-text'>By creating an account you agree to our <a href="">Terms & Policy</a></span>
           <button>SignUp</button>
 
           <div className="login">
             <h4>or</h4>
-            <Link to="/login">LogIn</Link>
+            <Link to="/login" id='link'>LogIn</Link>
           </div>
 
         </form>

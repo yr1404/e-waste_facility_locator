@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@200&display=swap');
+
 .login-container {
     position: fixed;
     top: 0;
@@ -19,5 +21,170 @@
         flex-direction: column;
         background-color: white;
         border-radius: 30px;
+
+        .username {
+            width: 60%;
+
+            #username-input {
+                display: flex;
+                align-items: center;
+                margin-top: 2vh;
+                border-bottom: 2px solid #000000bd;
+
+                input {
+                    width: 90%;
+                    border: none;
+                    outline: none;
+                    font-family: 'Lexend';
+                    height: 2em;
+                    font-size: 25px;
+                    padding-left: 0.2em;
+
+                }
+            }
+        }
+
+        .password {
+            width: 60%;
+            margin-block: 3vh;
+
+            #password-input {
+                display: flex;
+                align-items: center;
+                margin-top: 2vh;
+
+                input {
+                    width: 90%;
+                    border: none;
+                    outline: none;
+                    font-family: 'Lexend';
+                    height: 2em;
+                    font-size: 25px;
+                    padding-left: 0.2em;
+                }
+            }
+
+            #forgot-pass {
+                display: block;
+                text-align: right;
+
+                a {
+                    text-decoration: none;
+                    color: #000;
+                    font-family: 'Lexend';
+                }
+            }
+        }
     }
+
+
+    button {
+        background-color: #66B266;
+        font-size: 30px;
+        color: white;
+        border: none;
+        border-radius: 50px;
+        height: 2em;
+        width: 70%;
+        cursor: pointer;
+    }
+
+    h2 {
+        font-family: 'PT Sans';
+        font-size: 40px;
+    }
+
+    span {
+        font-family: 'Lexend', sans-serif;
+        font-size: 30px;
+    }
+
+    .signup {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h4 {
+            font-family: 'Lexend', sans-serif;
+            font-weight: 300;
+            text-align: center;
+            background-color: white;
+
+            &:before {
+                display: block;
+                content: "";
+                width: 12vw;
+                height: 1px;
+                background-color: black;
+                position: relative;
+                left: -60%;
+                top: 50%;
+            }
+
+            &:after {
+                display: block;
+                content: "";
+                width: 12vw;
+                height: 1px;
+                background-color: black;
+                position: relative;
+                left: 60%;
+                top: -47%;
+            }
+
+        }
+
+        #link {
+            text-decoration: none;
+            font-family: 'Lexend', sans-serif;
+            font-weight: 600;
+            color: #000;
+        }
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .login-container {
+
+        .login-form {
+            width: 50%;
+        }
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+    .login-container {
+
+        .login-form {
+            width: 70%;
+        }
+    }
+
+}
+
+@media screen and (max-width: 750px) {
+    .login-container {
+        .login-form {
+            width: 90%;
+        }
+
+        .signup {
+            h4 {
+
+                &:before {
+                    width: 20vw;
+                    left: -90%;
+                }
+                
+                &:after {
+                    width: 20vw;
+                    left: 90%;
+                }
+
+            }
+        }
+    }
+
 }
