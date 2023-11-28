@@ -1,6 +1,7 @@
 .locate-container {
     background-color: #66B266;
     height: 100vh;
+    width: 100%;
     position: relative; // Add position relative to allow absolute positioning of child
     padding-top: 15vh;
     display: flex;
@@ -27,6 +28,7 @@
             position: relative;
             right: 2.5em;
             z-index: 4;
+            height: 30px;
         }
     }
 
@@ -46,12 +48,18 @@
             th,
             td {
                 border: 1px solid;
-                padding: 1em 3em;
+                padding: 20px 5vw;
             }
 
             tbody tr:nth-child(odd) {
                 background-color: #AEAEAE;
             }
         }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .table-container {
+        overflow-x: scroll;
     }
 }

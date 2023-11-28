@@ -16,7 +16,7 @@
     padding-inline: 3em;
 
     #logo {
-        width: 18em;
+        width: fit-content;
 
         #logo-link {
             display: flex;
@@ -53,12 +53,14 @@
 
             #locate {
                 position: relative;
+                height: 7.5vh;
                 top: 0.2em;
                 left: 1em;
             }
 
             #credit {
                 position: relative;
+                height: 4.5vh;
                 top: 0.1em;
             }
 
@@ -82,12 +84,13 @@
         top: 0.1em;
         z-index: 4;
         transition: right 0.3s ease;
+        height: 4.5vh;
     }
 
     #search-bar {
         position: absolute;
         width: 20em;
-        height: 2.2em;
+        height: 5vh;
         border-radius: 20px;
         border: none;
         right: 10.5em;
@@ -106,7 +109,7 @@
     #navbar {
 
         #search-bar {
-            width: 15em;
+            width: 30%;
         }
     }
 }
