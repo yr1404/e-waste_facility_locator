@@ -12,7 +12,7 @@ body {
     justify-content: center;
 
     .background {
-        background-image: url('assets/bg-recycle.png');
+        background-image: url('../../../public/assets/bg-recycle.png');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -109,7 +109,7 @@ body {
     .container {
 
         .background {
-            background-image: url('assets/bg-recycle-mobile.png');
+            background-image: url('../../../public/assets/bg-recycle-mobile.png');
             width: 100%;
         }
 

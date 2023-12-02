@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './styles.scss';
 import { Link } from 'react-router-dom';
+import { Tooltip } from 'react-tooltip';
+import 'react-tooltip/dist/react-tooltip.css'
 
 const Navbar = () => {
 
@@ -38,20 +40,21 @@ const Navbar = () => {
             <div id="logo">
                 <Link to="" id='logo-link'>
                     <img src="assets/logo 1.png" alt="Logo" />
-                    <span style={{visibility: isSmallScreen ? 'hidden' : 'visible'}}>eWaste Facility Locator</span>
+                    <span style={{ visibility: isSmallScreen ? 'hidden' : 'visible' }}>eWaste Facility Locator</span>
                 </Link>
             </div>
 
 
-            <ul className="nav-links-container" style={{ zIndex: searchIsClicked ? 0 : 2, visibility: isSmallScreen ? (menuIsClicked ? 'visible' : 'hidden') : 'visible'}}>
+            <ul className="nav-links-container" style={{ zIndex: searchIsClicked ? 0 : 2, visibility: isSmallScreen ? (menuIsClicked ? 'visible' : 'hidden') : 'visible' }}>
                 <li className="navlinks">
                     <Link to="/locate">
-                        <img src="assets/locate.png" alt="" id='locate' onClick={menuClick} />
+                        <img src="assets/locate.png" alt="" id='locate' onClick={menuClick} data-tooltip-id="my-tooltip" data-tooltip-content="Locate Nearby Facilities" />
                     </Link>
                 </li>
                 <li className="navlinks">
                     <Link to="/credit">
-                        <img src="assets/coins.png" alt="Credit Points" id='credit' onClick={menuClick} />
+                        <img src="assets/coins.png" alt="Credit Points" id='credit' onClick={menuClick}
+                        data-tooltip-id="my-tooltip" data-tooltip-content="Calculate Credit Points" />
                     </Link>
                 </li>
                 <li className="navlinks">
@@ -61,13 +64,16 @@ const Navbar = () => {
                     <img src="assets/search.png" alt="Search"
                         onClick={handleClick}
                         id='search-img'
-                        style={{ right: isSmallScreen ? '0' : (searchIsClicked ? '0.5em' : '0' ) }}
+                        style={{ right: isSmallScreen ? '0' : (searchIsClicked ? '0.5em' : '0') }}
                     />
                 </li>
                 <input type='text' id="search-bar" placeholder="Search" style={{ opacity: searchIsClicked ? 1 : 0, zIndex: searchIsClicked ? 3 : 0 }} />
             </ul>
-            <img src="assets/hamburger.png" alt="Menu" id='menu' style={{display: isSmallScreen ? 'inline' : 'none'}} onClick={menuClick}/>
+            <img src="assets/hamburger.png" alt="Menu" id='menu' style={{ display: isSmallScreen ? 'inline' : 'none' }} onClick={menuClick} />
+
+            <Tooltip id='my-tooltip' />
         </nav>
+
     )
 }
 
