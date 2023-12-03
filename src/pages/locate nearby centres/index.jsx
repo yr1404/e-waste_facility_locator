@@ -21,8 +21,8 @@ const LocateNearbyCentres = () => {
 
         <table className="location-table">
 
-          <tr>
-            <thead>
+          <thead>
+            <tr>
 
               <th>S.No.</th>
               <th>Facility Name</th>
@@ -31,28 +31,58 @@ const LocateNearbyCentres = () => {
               <th>MTA</th>
               <th></th>
 
-            </thead>
+            </tr>
+          </thead>
 
-            <tbody>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>
-                  <a href="">
-                    Locate on map
-                  </a>
-                </td>
-              </tr>
-            </tbody>
-          </tr>
+          <tbody>
+            <tr>
+
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>
+                <a href="">
+                  Locate on map
+                </a>
+              </td>
+
+            </tr>
+            <tr>
+
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>
+                <a href="">
+                  Locate on map
+                </a>
+              </td>
+
+            </tr>
+            <tr>
+
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>
+                <a href="">
+                  Locate on map
+                </a>
+              </td>
+
+            </tr>
+          </tbody>
 
         </table>
       </div>
 
-    </div>
+    </div >
   )
 }
 

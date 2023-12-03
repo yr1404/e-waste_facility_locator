@@ -33,14 +33,16 @@ const Navbar = () => {
     const [menuIsClicked, setMenuIsClicked] = useState(false);
     const menuClick = () => {
         setMenuIsClicked(!menuIsClicked);
+        console.log(menuIsClicked);
     }
 
     return (
         <nav id="navbar">
             <div id="logo">
                 <Link to="" id='logo-link'>
-                    <img src="assets/logo 1.png" alt="Logo" />
-                    <span style={{ visibility: isSmallScreen ? 'hidden' : 'visible' }}>eWaste Facility Locator</span>
+                    <img src="assets/logo 1.png" alt="Logo" 
+                    onClick={() => setMenuIsClicked(false)}/>
+                    <span style={{ display: isSmallScreen ? 'none' : 'inline' }}>eWaste Facility Locator</span>
                 </Link>
             </div>
 
