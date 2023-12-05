@@ -4,7 +4,7 @@ This repository contains our project files.
 ## TODO List:  
 - [ ] Frontend
   - [ ] **Wireframing*
-  - [ ] **Building prototype as per wireframe*
+  - [X] **Building prototype as per wireframe*
   - [ ] Connecting to backend
 
 - [ ] Backend
