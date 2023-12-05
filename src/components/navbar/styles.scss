@@ -100,6 +100,25 @@
         transition: opacity 0.3s ease;
     }
 
+    #menu {
+        background: url('../../../public/assets/hamburger.png') no-repeat;
+        background-size: contain;
+        z-index: 10;
+        width: 2em;
+        height: 2em;
+        margin-right: 2em;
+        cursor: pointer;
+    }
+
+    #cross {
+        background: url('../../../public/assets/cross.png') no-repeat;
+        background-size: contain;
+        z-index: 10;
+        width: 2em;
+        height: 2em;
+        margin-right: 2em;
+        cursor: pointer;
+    }
     
 }
 
@@ -177,10 +196,5 @@
         }
     }
 
-    #menu {
-        z-index: 10;
-        width: 2em;
-        margin-right: 2em;
-        cursor: pointer;
-    }
+    
 }

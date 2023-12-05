@@ -33,15 +33,15 @@ const Navbar = () => {
     const [menuIsClicked, setMenuIsClicked] = useState(false);
     const menuClick = () => {
         setMenuIsClicked(!menuIsClicked);
-        console.log(menuIsClicked);
+        // console.log(menuIsClicked);
     }
 
     return (
         <nav id="navbar">
             <div id="logo">
                 <Link to="" id='logo-link'>
-                    <img src="assets/logo 1.png" alt="Logo" 
-                    onClick={() => setMenuIsClicked(false)}/>
+                    <img src="assets/logo 1.png" alt="Logo"
+                        onClick={() => setMenuIsClicked(false)} />
                     <span style={{ display: isSmallScreen ? 'none' : 'inline' }}>eWaste Facility Locator</span>
                 </Link>
             </div>
@@ -56,7 +56,7 @@ const Navbar = () => {
                 <li className="navlinks">
                     <Link to="/credit">
                         <img src="assets/coins.png" alt="Credit Points" id='credit' onClick={menuClick}
-                        data-tooltip-id="my-tooltip" data-tooltip-content="Calculate Credit Points" />
+                            data-tooltip-id="my-tooltip" data-tooltip-content="Calculate Credit Points" />
                     </Link>
                 </li>
                 <li className="navlinks">
@@ -71,7 +71,23 @@ const Navbar = () => {
                 </li>
                 <input type='text' id="search-bar" placeholder="Search" style={{ opacity: searchIsClicked ? 1 : 0, zIndex: searchIsClicked ? 3 : 0 }} />
             </ul>
-            <img src="assets/hamburger.png" alt="Menu" id='menu' style={{ display: isSmallScreen ? 'inline' : 'none' }} onClick={menuClick} />
+            <div
+                id='menu'
+                style={{
+                    display: isSmallScreen ? (menuIsClicked ? 'none' : 'inline') : 'none',
+                }}
+                onClick={menuClick}
+            ></div>
+
+            <div
+                id='cross'
+                style={{
+                    display: isSmallScreen? (menuIsClicked ? 'inline' : 'none'): 'none',
+                }}
+                onClick={menuClick}
+            ></div>
+
+
 
             <Tooltip id='my-tooltip' />
         </nav>
