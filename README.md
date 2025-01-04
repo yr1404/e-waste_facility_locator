@@ -1,4 +1,5 @@
-# E-Waste Facility Locator:package:
+# E-Waste Facility Locator  ([Preview](https://ewastefacilitylocator.netlify.app/))
+
 This repository contains our project files. 
 
 ## TODO List:  
